@@ -1,0 +1,56 @@
+/* Mobile screen*/
+.container {
+    display: grid;
+    grid-template-areas:    "Header"
+                            "Navigasi"
+                            "Content"
+                            "ads"
+                            "Footer";
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+/* Tablet screen*/
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-areas:    "Header Header"
+                                "Navigasi Content"
+                                "ads ads"
+                                "Footer Footer";
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+/* Desktop screen*/
+@media screen and (min-width: 1024px) {
+
+    
+}
+.Header {
+    grid-area:Header;
+    background-color: rgb(144, 144, 144);
+    border-radius: 10px;
+    text-align: center;
+}
+.Navigasi {
+    grid-area:Navigasi;
+    background-color: rgb(133, 131, 131);
+    border-radius: 10px;
+    text-align: center;
+ 
+}
+.Content {
+    grid-area:Content;
+    background-color: rgb(109, 85, 85);
+    border-radius: 10px;
+    text-align: center;
+}
+.ads {
+    grid-area:ads;
+}
+.footer {
+    grid-area:Footer;
+}
